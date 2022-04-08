@@ -1,16 +1,10 @@
 {
-
   "host": "0.0.0.0",
   "port": 7777,
-
-  "keyLength": 10,
-
-  "maxLength": 400000,
-
+  "keyLength": 8,
+  "maxLength": 65536,
   "staticMaxAge": 86400,
-
-  "recompressStaticAssets": true,
-
+  "recompressStaticAssets": false,
   "logging": [
     {
       "level": "verbose",
@@ -18,11 +12,9 @@
       "colorize": true
     }
   ],
-
   "keyGenerator": {
     "type": "phonetic"
   },
-
   "rateLimits": {
     "categories": {
       "normal": {
@@ -31,13 +23,10 @@
       }
     }
   },
-
   "storage": {
-    "type": "file"
+    "type": "memcached",
+    "host": "127.0.0.1",
+    "port": 11211
   },
-
-  "documents": {
-    "about": "./about.md"
-  }
-
+  "documents": {}
 }
