@@ -170,9 +170,6 @@ paste.prototype.configureButtons = function () {
   for (const button of this.buttons) {
     this.configureButton(button);
   }
-  // if (navigator.userAgent.match(/ipad|iphone/i)) {
-  //   this.buttons[4].removeEventListener('click');
-  // }
 };
 
 paste.prototype.configureButton = (options) => {
